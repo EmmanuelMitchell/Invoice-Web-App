@@ -82,7 +82,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     calculatTotalAmount();
-  });
+  }, [calculatTotalAmount]);
 
   //........deleteFunction .........//
   function handleDeleteItem(id) {
@@ -517,7 +517,7 @@ export default function Dashboard() {
 
         {previewInvoice && (
           <div className="fixed top-0 left-0 right-0 bottom-0 bg-slate-900 ">
-            <div className="bg-white opacity-8 max-w-7xl mx-auto text-black rounded-lg ">
+            <div className="bg-white max-w-5xl mx-auto text-black rounded-lg ">
               <div className="flex justify-between p-4">
                 <Button onClick={createPDF} className="bg-teal-800">
                   Download
